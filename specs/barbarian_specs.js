@@ -12,6 +12,9 @@ describe('Barbarian', function(){
   it('should have an anger level that starts at 0 because he is pretty chilled.', function(){
     assert.equal(0, barbarian.angerLevel);
   });
-  
+  it('should have a fav beer called FruitJuice', function(){
+    assert.equal("Fruit Juice", barbarian.favouriteBeer);
+  });
+
 
 });
