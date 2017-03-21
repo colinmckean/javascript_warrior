@@ -8,7 +8,9 @@ var barbarian = {
       this.angerLevel += 10;
   },
   favouriteBeer: "Fruit Juice",
-  weapon: greatAxe = {name: "Great Axe", damage: 10
+  weapon: greatAxe = {name: "Great Axe", damage: 10, swing: function(){
+    return barbarian.name + " swings his " + this.name + " dealing " + this.damage + " damage";
+  }
 }
 }
 module.exports = barbarian;

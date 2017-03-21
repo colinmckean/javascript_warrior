@@ -25,5 +25,8 @@ describe('Barbarian', function(){
   it('should increase anger if not favouriteBeer', function(){
     barbarian.drink("Extra Strong Beer");
     assert.equal(10, barbarian.angerLevel);
+  });
+  it('should swing his axe and deal damage', function(){
+    assert.equal("Maximus swings his Great Axe dealing 10 damage", barbarian.weapon.swing());
   })
 });
