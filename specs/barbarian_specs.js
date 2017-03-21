@@ -22,4 +22,8 @@ describe('Barbarian', function(){
     barbarian.drink("Fruit Juice");
     assert.equal(60, barbarian.health);
   });
+  it('should increase anger if not favouriteBeer', function(){
+    barbarian.drink("Extra Strong Beer");
+    assert.equal(10, barbarian.angerLevel);
+  })
 });
