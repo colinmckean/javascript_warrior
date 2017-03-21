@@ -1,5 +1,6 @@
 var assert = require('assert');
 var barbarian = require('../barbarian');
+var pm = require('../plasma_canon');
 
 describe('Barbarian', function(){
   it('should have a name of Maximus!', function(){
@@ -27,6 +28,17 @@ describe('Barbarian', function(){
     assert.equal(10, barbarian.angerLevel);
   });
   it('should swing his axe and deal damage', function(){
-    assert.equal("Maximus swings his Great Axe dealing 10 damage", barbarian.weapon.swing());
+    assert.equal("Maximus swings his Great Axe dealing 10 damage", barbarian.attack());
+  });
+  it('should equip a new weapon', function(){
+    barbarian.equip(pm);
+    assert.equal("Plasmah Canon 2000", barbarian.weapon.name);
   })
+  it('should not fire the plasma canon when not charged', function(){
+    assert.equal("Maximus\'s Plasmah Canon 2000 is insufficiently charged.", barbarian.attack());
+  });
+  it('should fire when it has been charged.', function(){
+    assert.equal("plasma canon is charging.",barbarian.weapon.chargeWeapon());
+    assert.equal("Maximus fires his Plasmah Canon 2000 dealing 100 damage", barbarian.attack());
+  });
 });
