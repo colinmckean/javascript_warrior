@@ -15,6 +15,7 @@ describe('Barbarian', function(){
   it('should have a fav beer called FruitJuice', function(){
     assert.equal("Fruit Juice", barbarian.favouriteBeer);
   });
-
-
+  it('should have health that starts at 50', function(){
+    assert.equal(50, barbarian.health);
+  });
 });
