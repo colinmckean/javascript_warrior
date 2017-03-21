@@ -18,4 +18,8 @@ describe('Barbarian', function(){
   it('should have health that starts at 50', function(){
     assert.equal(50, barbarian.health);
   });
+  it('taking a drink of favouriteBeer should increase health.', function(){
+    barbarian.drink("Fruit Juice");
+    assert.equal(60, barbarian.health);
+  });
 });
